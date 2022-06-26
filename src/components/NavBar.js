@@ -1,13 +1,14 @@
 import React from "react";
+import logo from '../images/logo-mif.png';
 
 const NavBar = () => {
     return (
         <div>
 
-            <nav>
-                <img src="./images/logo-mif.png" alt=""/>
-                <ul class="flex flex-row gap-x-2 justify-end my-5">
-                    <li class="box-content px-4 hover:shadow-lg">
+            <nav class="flex items-center py-2">
+                <img class="w-12 h-12 flex ml-10" src={logo} alt=""/>
+                <ul class="flex flex-row gap-x-2">
+                    <li class="box-content ml-10 px-4 hover:shadow-lg">
                         <a href="#">Inicio</a>
                     </li>
                     <li class="box-content px-4 hover:shadow-lg relative">
