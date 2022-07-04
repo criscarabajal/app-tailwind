@@ -9,3 +9,35 @@
     cursor: pointer;
     transform: scale(140%);
 }
+
+.contadorWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contador {
+    background-color: rgb(216, 216, 216);
+    width: 30%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnSumar, .btnRestar {
+    background-color: white;
+    width: 50px;
+    height: 30px;
+    margin: 0 60px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.btnAgregar {
+    width: 30%;
+    height: 40px;
+    color: grey ;
+}
