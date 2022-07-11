@@ -6,19 +6,19 @@ const NavBar = () => {
     return (
         <div>
 
-            <nav class="flex items-center py-2 nav-bar">
-                <img class="w-12 h-12 flex ml-10" src={logo} alt=""/>
-                <ul class="flex flex-row gap-x-2">
-                    <li class="box-content ml-10 px-4 hover:shadow-lg">
+            <nav className="flex items-center py-2 nav-bar">
+                <img className="w-12 h-12 flex ml-10" src={logo} alt=""/>
+                <ul className="flex flex-row gap-x-2">
+                    <li className="box-content ml-10 px-4 hover:shadow-lg">
                         <a href="#">Inicio</a>
                     </li>
-                    <li class="box-content px-4 hover:shadow-lg relative">
+                    <li className="box-content px-4 hover:shadow-lg relative">
                         <a href="#">Productos</a>
                     </li>
-                    <li class="box-content px-4 hover:shadow-lg">
+                    <li className="box-content px-4 hover:shadow-lg">
                         <a href="#">Informacion</a>
                     </li>
-                    <li class="box-content px-4 hover:shadow-lg">
+                    <li className="box-content px-4 hover:shadow-lg">
                         <a href="#">Contacto</a>
                     </li>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search mx-2 navIcon" viewBox="0 0 16 16">
