@@ -48,7 +48,7 @@ const ItemListConteiner = ({greeting}) => {
         <ItemCount
           stock={5} initial={1} onAdd={() => alert("agregado")}
         />
-        {loading ? <span>loading...</span> : <ItemList items={[products]} />}
+        {loading ? <span>loading...</span> : <ItemList items={products} />}
     </div>
   )
 }
