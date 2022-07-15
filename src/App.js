@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './components/NavBar.js';
 import ItemListConteiner from './components/ItemListConteiner';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -12,9 +13,9 @@ function App() {
         {/* <ItemListConteiner greeting={"Usando props en react"}/> */}
       </nav>
       
-        
+        <h1>BIENVENIDO</h1>
       
-      <ItemDetailContainer />
+      {/* <ItemDetailContainer /> */}
     </div>
   );
 }

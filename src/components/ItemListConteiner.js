@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ItemCount from './ItemCount';
 import ItemList from './ItemList';
 import producto from '../producto.json';
+import NavBar from './NavBar';
 
 
 
@@ -44,6 +45,7 @@ const ItemListConteiner = ({greeting}) => {
 
   return (
     <div>
+    <NavBar />
         {greeting}
         <ItemCount
           stock={5} initial={1} onAdd={() => alert("agregado")}

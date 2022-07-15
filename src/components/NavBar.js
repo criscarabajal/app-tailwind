@@ -1,6 +1,7 @@
 import React from "react";
 import logo from '../images/logo-mif.png';
 import CartWidget from "./CartWidget";
+import {Link} from "react-router-dom";
 
 const NavBar = () => {
     return (
@@ -10,16 +11,16 @@ const NavBar = () => {
                 <img className="w-12 h-12 flex ml-10" src={logo} alt=""/>
                 <ul className="flex flex-row gap-x-2">
                     <li className="box-content ml-10 px-4 hover:shadow-lg">
-                        <a href="#">Inicio</a>
+                        <Link to="/Inicio">Inicio</Link>
                     </li>
                     <li className="box-content px-4 hover:shadow-lg relative">
-                        <a href="#">Productos</a>
+                        <Link to="/Productos">Productos</Link>
                     </li>
                     <li className="box-content px-4 hover:shadow-lg">
-                        <a href="#">Informacion</a>
+                        <Link to="/Informacion">Informacion</Link>
                     </li>
                     <li className="box-content px-4 hover:shadow-lg">
-                        <a href="#">Contacto</a>
+                        <Link to="/Contacto">Contacto</Link>
                     </li>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search mx-2 navIcon" viewBox="0 0 16 16">
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
