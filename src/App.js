@@ -1,21 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 import NavBar from './components/NavBar.js';
-import ItemListConteiner from './components/ItemListConteiner';
-import ItemDetailContainer from './components/ItemDetailContainer';
-import { Link } from "react-router-dom";
+import Footer from './components/Footer';
+
+
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <nav>
-        <NavBar/>
-        {/* <ItemListConteiner greeting={"Usando props en react"}/> */}
+        <NavBar />
       </nav>
-      
-        <h1>BIENVENIDO</h1>
-      
-      {/* <ItemDetailContainer /> */}
+      <main>
+        
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

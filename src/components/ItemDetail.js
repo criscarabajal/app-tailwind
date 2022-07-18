@@ -1,20 +1,30 @@
-import React from 'react'
+import React from 'react';
 
+const ItemDetail = ({productDetail}) => {
+  
+  console.log(productDetail);
+  console.log(productDetail.title);
 
-
-const ItemDetail = ({details}) => {
-  const {id,title,price,description,category,image} = details[0];
-  console.log(details);
+const {title,price,description,image} = productDetail;
   return (
-    <div className='flex justify-center'>
-      <div className='flex flex-col items-center' >
-            <img className='w-40' src={image} alt={title}></img>
-            <h3 className='text-2xl'>{title}</h3>
-            <span> {description} </span>
-            <span> {price} </span>
+    
+    <div>
+      <div className="card flex flex-row my-20">
+        <figure>
+          <img className='w-2/4' src={image} alt="Imagen" />
+        </figure>
+        <div className="card-body flex flex-col justify-start">
+          <h2 className="text-4xl font-bold">{title}</h2>
+          <p className='w-2/4 my-10'>{description}</p>
+          <p className='text-2xl text-emerald-400'>{price}</p>
+          <div className="card-actions justify-start">
+            <button className="btn btn-primary">Finalizar compra</button>
+          </div>
+        </div>
       </div>
     </div>
-  )
+
+  );
 };
 
 

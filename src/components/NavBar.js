@@ -1,17 +1,18 @@
 import React from "react";
 import logo from '../images/logo-mif.png';
 import CartWidget from "./CartWidget";
-import {Link} from "react-router-dom";
+import {Link, Outlet} from "react-router-dom";
 
 const NavBar = () => {
     return (
-        <div>
-
-            <nav className="flex items-center py-2 nav-bar">
-                <img className="w-12 h-12 flex ml-10" src={logo} alt=""/>
+      <div>
+        <nav className="flex items-center py-2 nav-bar">
+                <Link to="/">
+                    <img className="w-12 h-12 flex ml-10" src={logo} alt=""/>
+                </Link>
                 <ul className="flex flex-row gap-x-2">
                     <li className="box-content ml-10 px-4 hover:shadow-lg">
-                        <Link to="/Inicio">Inicio</Link>
+                        <Link to="/">Inicio</Link>
                     </li>
                     <li className="box-content px-4 hover:shadow-lg relative">
                         <Link to="/Productos">Productos</Link>
@@ -31,13 +32,15 @@ const NavBar = () => {
                     <div>
                         <CartWidget/>
                     </div>
-                    
                 </ul>
             </nav>
 
-
-        </div>
-    )
+        
+        <section>
+          <Outlet />
+        </section>
+      </div>
+    );
 }
 
 
