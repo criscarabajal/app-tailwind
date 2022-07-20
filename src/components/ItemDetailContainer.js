@@ -4,17 +4,6 @@ import { useParams } from 'react-router-dom';
 import producto from '../producto.json';
 
 
-// const getItem = new Promise((resolve,reject) => {
-//     let afterPromises = true;
-//     setTimeout(() => {
-//       if (afterPromises) {
-//         resolve (producto);
-//       } else {
-//         reject("Fallo en Get Detail")
-//       }
-//     }, 2000);
-//   });
-
 
 const ItemDetailContainer = () => {
 

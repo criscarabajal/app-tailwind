@@ -10,7 +10,7 @@
     transform: scale(140%);
 }
 
-.contadorWrap {
+/* .contadorWrap {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,4 +40,4 @@
     width: 30%;
     height: 40px;
     color: grey ;
-}
+} */

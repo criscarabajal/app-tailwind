@@ -12,15 +12,15 @@ const ItemCount = ({stock, initial, onAdd}) => {
     };
 
     return (
-        <div className="contadorWrap">
-        <div className="contador" >
-            <button className="btnSumar" onClick={restar}>-</button>
-            <h3>{count}</h3>
-            <button className="btnRestar" onClick={sumar}>+</button>
+        <div className="flex flex-col items-center">
+        <div className="flex flex-row my-10" >
+            <button className="text-4xl" onClick={restar}>-</button>
+            <h3 className="mx-16 text-4xl">{count}</h3>
+            <button className="text-4xl" onClick={sumar}>+</button>
         </div>
-            <button className="btnAgregar" onClick={ () =>
-                count <= stock && onAdd(count)
-            }>Agregar al carrito</button>
+            <button className="btn btn-primary" onClick={ () =>
+                count <= stock && onAdd(count)}>Agregar al carrito
+            </button>
             
         </div>
     )
