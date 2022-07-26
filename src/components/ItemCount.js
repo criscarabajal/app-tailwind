@@ -11,6 +11,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
         setCount((prevVal) => (prevVal > 0 ? count -1 : count));
     };
 
+    const addToCart = () => {
+        onAdd(count);
+    }
+
+
     return (
         <div className="flex flex-col items-center">
         <div className="flex flex-row my-10" >
@@ -18,8 +23,10 @@ const ItemCount = ({stock, initial, onAdd}) => {
             <h3 className="mx-16 text-4xl">{count}</h3>
             <button className="text-4xl" onClick={sumar}>+</button>
         </div>
-            <button className="btn btn-primary" onClick={ () =>
-                count <= stock && onAdd(count)}>Agregar al carrito
+            <button className="btn btn-primary"
+            // onClick={ () => count <= stock && onAdd(count)}
+            onClick={addToCart}>
+            Agregar al carrito
             </button>
             
         </div>

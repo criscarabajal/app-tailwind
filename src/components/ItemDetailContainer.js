@@ -23,7 +23,7 @@ const ItemDetailContainer = () => {
         } else {
           reject("Fallo en Get Detail")
         }
-      }, 2000);
+      });
     });
 
     useEffect(() => {

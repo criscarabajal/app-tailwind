@@ -6,11 +6,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemListConteiner from './components/ItemListConteiner';
 import App from './App';
 import ItemDetailContainer from './components/ItemDetailContainer';
-
-
+import Cart from './components/Cart';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
+  
   <BrowserRouter>
 
     <Routes>
@@ -20,13 +21,14 @@ root.render(
         <Route path='Productos/:id' element={<ItemDetailContainer />} />
         <Route path='Informacion' element={<div>Informacion</div>} />
         <Route path='Contacto' element={<div>Contacto</div>} />
+        <Route path='Cart' element={<Cart />} />
       </Route>
 
     </Routes>
 
     
   </BrowserRouter>
-
+  
 );
 
 // If you want to start measuring performance in your app, pass a function

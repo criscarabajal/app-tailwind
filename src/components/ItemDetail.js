@@ -2,11 +2,18 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 
+
+
+
 const ItemDetail = ({productDetail}) => {
+console.log(productDetail);
+
 
 const {title,price,description,image} = productDetail;
 
 const [cart, setCart] = useState(true);
+
+
 
   return (
     <div>
