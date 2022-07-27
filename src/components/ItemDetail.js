@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
-
+import CartContext from '../context/CartContext';
 
 
 
@@ -12,8 +12,13 @@ console.log(productDetail);
 const {title,price,description,image} = productDetail;
 
 const [cart, setCart] = useState(true);
+const {addItem} = useContext(CartContext);
 
 
+function onAddEvent (n) {
+  setCart(false);
+  addItem({...productDetail, quantity: n});
+}
 
   return (
     <div>
@@ -30,9 +35,10 @@ const [cart, setCart] = useState(true);
               <ItemCount
                 stock={5}
                 initial={1}
-                onAdd={() => {
-                  alert("Agregado al carrito");
-                  setCart(false);
+                onAdd={(n) => {
+                  onAddEvent(n);
+                  alert("El producto se agrego al carrito");
+                  console.log(n);
                 }}
               />
             ) : (
@@ -40,6 +46,7 @@ const [cart, setCart] = useState(true);
                 Ver Carrito
               </Link>
             )}
+            
           </div>
         </div>
       </div>

@@ -1,12 +1,12 @@
 import React from 'react';
 import NavBar from './components/NavBar.js';
 import Footer from './components/Footer';
-import {CartProvider} from './components/CartContext';
+import {CartProvider} from './context/CartContext';
 
 
 function App() {
   return (
-    // <CartProvider></CartProvider>
+    <CartProvider>
       <div>
         <nav>
           <NavBar />
@@ -18,7 +18,7 @@ function App() {
           <Footer />
         </footer>
       </div>
-    
+    </CartProvider>
   );
 }
 
