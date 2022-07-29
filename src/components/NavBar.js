@@ -10,7 +10,7 @@ const NavBar = () => {
                 <Link to="/">
                     <img className="w-12 h-12 flex ml-10" src={logo} alt=""/>
                 </Link>
-                <ul className="flex flex-row gap-x-2">
+                <ul className="flex flex-row gap-x-2 text-cyan-900">
                     <li className="box-content ml-10 px-4 hover:shadow-lg">
                         <Link to="/">Inicio</Link>
                     </li>
