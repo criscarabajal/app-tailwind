@@ -1,6 +1,5 @@
-
 import { createContext, useState } from "react";
-
+import React from "react";
 const CartContext = createContext();
 
 // Provider de datos
@@ -60,9 +59,12 @@ const CartProvider = ({ children }) => {
         }
 
         return (
-            <CartContext.Provider value={data}>
-                {children}
-            </CartContext.Provider>
+            <div>
+                <CartContext.Provider value={data}>
+                    {children}
+                </CartContext.Provider>
+            </div>
+            
         )
     }
 

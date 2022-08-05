@@ -2,6 +2,7 @@
 
 .nav-bar {
     background-color: rgb(230, 230, 230);
+    display: flex;
 }
 
 .navIcon:hover {
@@ -10,3 +11,17 @@
     transform: scale(140%);
 }
 
+.logo {
+    width: 150px;
+}
+
+.menu {
+    display: flex;
+}
+.menu-li {
+    list-style-type: none;
+    margin-right: 20px;
+}
+.menu-li-link {
+    text-decoration: none;
+}

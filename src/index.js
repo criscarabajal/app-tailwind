@@ -16,12 +16,12 @@ root.render(
 
     <Routes>
       <Route path='/' element={<App />}>
-        {/* <Route index element={<ItemListConteiner />} /> */}
-        <Route path='Productos' element={<ItemListConteiner />} />
-        <Route path='Productos/:id' element={<ItemDetailContainer />} />
-        <Route path='Informacion' element={<div>Informacion</div>} />
-        <Route path='Contacto' element={<div>Contacto</div>} />
-        <Route path='Cart' element={<Cart />} />
+      
+        <Route path="/" element={<ItemListConteiner />} />
+        <Route path="/:categoryId" element={<ItemListConteiner />} />
+        <Route path="/producto/:idItem" element={<ItemDetailContainer />} />
+        <Route path='Cart' element={<Cart />} /> 
+    
       </Route>
 
     </Routes>
