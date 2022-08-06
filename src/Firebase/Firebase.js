@@ -39,9 +39,9 @@ export const getDetailItem = (id) => {
   
     // Funcion que trae los productos filtrados por categoria
   
-  export const getItemsFiltered = (category) => {
+  export const getItemsFiltered = (categ) => {
       const colRef = query(collection(db, 'Products')) 
-      const q = query(colRef, where("category", "==", category));
+      const q = query(colRef, where("category", "==", categ));
       return getDocs(q);
     };
 
