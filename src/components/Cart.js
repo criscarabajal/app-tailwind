@@ -68,7 +68,7 @@ const Cart = () => {
             Borrar productos
           </button>
         ) : (
-          <Link to="../Productos">
+          <Link to="/">
             <h1>No hay nada en tu carrito</h1>
             <button
               className="btn btn-primary btn-block w-48 mb-32"

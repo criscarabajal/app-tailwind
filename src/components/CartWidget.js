@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import CartContext from "../context/CartContext";
 import React from "react";
+
+
 const CartWidget = () => {
 
     const {removeAll, totalItems, totalPrice} = useContext(CartContext)
@@ -13,7 +15,7 @@ const CartWidget = () => {
             <div className="indicator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-5 w-5 my-3.5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
