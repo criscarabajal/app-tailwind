@@ -1,23 +1,22 @@
 import React, {useContext} from 'react'
 import CartContext from '../context/CartContext'
 import { Link } from 'react-router-dom'
+import { addOrder } from '../Firebase/Firebase'
 
 
 
-const CartProduct = ({ title, price, image, quantity, id, description }) => {
+const CartProduct = ({ title, price, image, quantity, id }) => {
 
   const { deleteItem } = useContext(CartContext)
 
-  const borrar = () => {
-      deleteItem(id)
-  }
 
   return (
     <div className='flex flex-col my-10'>
-      <div className='flex justify-between ml-10 bg-slate-600 py-2'>
-        <span>Producto</span>
-        <span>Cantidad</span>
-        <span className='mr-14'>Precio</span>
+      <div className='flex bg-slate-600 py-2'>
+        <span className='ml-10 w-1/3'>Producto</span>
+        <span className='w-1/4 ml-44'>Cantidad</span>
+        <span className='w-1/5 ml-44'>Precio</span>
+        <span></span>
       </div>
       <div className='flex justify-between my-8'>
         <div class="avatar ml-10 w-1/3">
@@ -27,8 +26,9 @@ const CartProduct = ({ title, price, image, quantity, id, description }) => {
           <span className='ml-5'>{title} </span>
         </div>
         
-        <span className='w-1/3'>{quantity} </span>
-        <span className='mr-14'>{quantity * price} </span>
+        <span className='w-1/5'>{quantity} </span>
+        <span className='mr-24'>${quantity * price} </span>
+        <button onClick={() => deleteItem(id)} className='mr-14 mb-8'>x</button>
       </div>
     </div>
      
@@ -39,12 +39,10 @@ const CartProduct = ({ title, price, image, quantity, id, description }) => {
 
 
 const Cart = () => {
-  const {cart, totalItems, totalPrice, removeAll} = useContext(CartContext)
+  const {cart, totalItems, totalPrice, removeAll, addItem} = useContext(CartContext)
   
-
   return (
     <div>
-      
       {cart.map((item) => (
         <CartProduct
           title={item.title}
@@ -56,17 +54,48 @@ const Cart = () => {
           key={item.id}
         />
       ))}
-      {cart.length > 0 &&
-              <div className="flex mx-auto w-8/12 mt-10 mb-10 font-bold shadow-xl bg-slate-600">
-                <div className="grid h-20 flex-grow rounded-box place-items-center">Total de productos: {totalItems}</div>
-                <div className="grid h-20 flex-grow rounded-box place-items-center">Total: ${totalPrice}</div>
-              </div>}
+      {cart.length > 0 && (
+        <div className="flex mx-auto w-8/12 mt-10 mb-10 font-bold shadow-xl bg-slate-600">
+          <div className="grid h-20 flex-grow rounded-box place-items-center">
+            Total de productos: {totalItems}
+          </div>
+          <div className="grid h-20 flex-grow rounded-box place-items-center">
+            Total: ${totalPrice}
+          </div>
+        </div>
+      )}
 
       <div className="mt-10 text-center">
         {cart.length > 0 ? (
-          <button className="btn btn-primary btn-block w-48 mb-32" onClick={removeAll}>
-            Borrar productos
-          </button>
+          <>
+            <button
+              className="btn btn-outline btn-success w-48 mb-32"
+              onClick={removeAll}
+            >
+              Borrar productos
+            </button>
+            <label for="my-modal-6" className="btn btn-secondary btn-block w-48 mb-32 ml-12"
+            onClick={() => {addOrder(cart)}} >
+              comprar
+            </label>
+
+            <input type="checkbox" id="my-modal-6" className="modal-toggle" />
+            <div className="modal modal-bottom sm:modal-middle">
+              <div className="modal-box">
+                <h3 className="font-bold text-lg">
+                  ¡Gracias por comprar con nosotros!
+                </h3>
+                <p className="py-4">
+                  Tus productos estan siendo preparados.
+                </p>
+                <div className="modal-action">
+                  <label for="my-modal-6" className="btn">
+                    Siuuu!
+                  </label>
+                </div>
+              </div>
+            </div>
+          </>
         ) : (
           <Link to="/">
             <h1>No hay nada en tu carrito</h1>
@@ -79,8 +108,6 @@ const Cart = () => {
           </Link>
         )}
       </div>
-      
-      
     </div>
   );
 }

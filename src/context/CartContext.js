@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
 import React from "react";
+import { addOrder } from "../Firebase/Firebase";
+import { Timestamp } from "firebase/firestore";
 const CartContext = createContext();
 
 // Provider de datos
@@ -18,7 +20,8 @@ const CartProvider = ({ children }) => {
 
     // Agregar un nuevo item al carrito
 
-    const addItem = (item) => {
+    const addItem =  (item) => {
+        
         const exist = itemInCart(item.id)
 
         if (!exist) {
