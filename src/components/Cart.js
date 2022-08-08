@@ -39,7 +39,7 @@ const CartProduct = ({ title, price, image, quantity, id }) => {
 
 
 const Cart = () => {
-  const {cart, totalItems, totalPrice, removeAll, addItem} = useContext(CartContext)
+  const {cart, totalItems, totalPrice, removeAll} = useContext(CartContext)
   
   return (
     <div>

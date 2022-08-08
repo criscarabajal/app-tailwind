@@ -54,7 +54,7 @@ export const getDetailItem = (id) => {
     // Funcion que agrega documentos a la coleccion Orders
   
   export const addOrder = (cart) => {
-    console.log(cart);
+    
     cart.map(item => {
       const order = {
       date: Timestamp.fromDate(new Date()),

@@ -7,6 +7,7 @@ import ItemListConteiner from './components/ItemListConteiner';
 import App from './App';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
+import Home from './components/Home';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,15 +16,13 @@ root.render(
   <BrowserRouter>
 
     <Routes>
-      <Route path='/' element={<App />}>
+        <Route path='/' element={<App />} >
       
-        
         <Route path="/:categoryId" element={<ItemListConteiner />} />
         <Route path="/producto/:idItem" element={<ItemDetailContainer />} />
         <Route path='Cart' element={<Cart />} /> 
-    
+        
       </Route>
-
     </Routes>
 
     

@@ -1,7 +1,5 @@
 import { createContext, useState } from "react";
 import React from "react";
-import { addOrder } from "../Firebase/Firebase";
-import { Timestamp } from "firebase/firestore";
 const CartContext = createContext();
 
 // Provider de datos

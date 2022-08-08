@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import {getItemsFiltered } from '../Firebase/Firebase';
 import ItemList from './ItemList';
-
+import { getItems } from '../Firebase/Firebase';
 
 
 const ItemListConteiner = ({greeting}) => {
@@ -17,7 +17,7 @@ const ItemListConteiner = ({greeting}) => {
   
   useEffect(() => {
 
-    getItemsFiltered(categoryId)
+    (categoryId === undefined ? (getItems()) : getItemsFiltered(categoryId))
     .then((snapshot) => {
         setProducts(
           snapshot.docs.map((document) => {
