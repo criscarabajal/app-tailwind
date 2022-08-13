@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { addOrder } from '../Firebase/Firebase'
 
 
-
 const CartProduct = ({ title, price, image, quantity, id }) => {
 
   const { deleteItem } = useContext(CartContext)
@@ -74,10 +73,11 @@ const Cart = () => {
             >
               Borrar productos
             </button>
-            <label for="my-modal-6" className="btn btn-secondary btn-block w-48 mb-32 ml-12"
-            onClick={() => {addOrder(cart)}} >
-              comprar
-            </label>
+            <Link to="/Form">
+              <label for="my-modal-6" className="btn btn-secondary btn-block w-48 mb-32 ml-12">
+                comprar
+              </label>
+            </Link>
 
             <input type="checkbox" id="my-modal-6" className="modal-toggle" />
             <div className="modal modal-bottom sm:modal-middle">

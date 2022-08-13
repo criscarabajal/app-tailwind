@@ -42,9 +42,16 @@ function onAddEvent (n) {
                 }}
               />
             ) : (
-              <Link to="/cart" className="btn btn-primary">
-                Ver Carrito
-              </Link>
+              <>
+                <Link to="/cart" className="btn btn-secondary">
+                  Ver Carrito
+                </Link>
+                <Link to="/">
+                    <button className="btn btn-primary btn-block w-40">
+                    Seguir comprando
+                    </button>
+                </Link>
+              </>
             )}
             
           </div>

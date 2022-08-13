@@ -6,9 +6,7 @@ import {
     getDocs,
     getFirestore,
     query,
-    Timestamp,
-    where,
-    addDoc,
+    where, 
 } from 'firebase/firestore';
 
 
@@ -25,7 +23,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+export const db = getFirestore(app);
 
 // Funcion que trae el detalle de un producto
 
@@ -50,22 +48,6 @@ export const getDetailItem = (id) => {
       return getDocs(q);
     };
 
-    
-    // Funcion que agrega documentos a la coleccion Orders
-  
-  export const addOrder = (cart) => {
-    
-    cart.map(item => {
-      const order = {
-      date: Timestamp.fromDate(new Date()),
-      buyer: {name: "Juan", phone: 1111111111, email: "email@email.com"},
-      items: [{id: item.id, title:item.title, quantity: item.quantity, price: item.price}],
-      total: item.price * item.quantity,
-    };
-    const orderCollection = collection(db, 'Orders');
-    addDoc(orderCollection, order);
-      
-    });
-  };
+
 
   
