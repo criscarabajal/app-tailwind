@@ -1,3 +1,13 @@
+# Descripcion del proyecto de cursada
+
+En el curso de React Js se desarrollo de principio a fin un ecommerce totalmente funcional.
+Usando JSX y los HOOKS como base para desarrollar nuestra aplicacion.
+
+En el aparte UI se utilizo la libreria de [Tailwind](https://tailwindcss.com/)
+junto con los componentes de [Daisyui](https://daisyui.com/)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +78,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Datos de contacto
+
+Cristian Carabajal
+Diseñador Grafico - WebDev 
+
+Instagram: @cris.carabajal93
+Email: cris.carabajal93@gmail.com
