@@ -1,24 +1,20 @@
-import React, {useState, useContext} from 'react';
-import { Link } from 'react-router-dom';
-import ItemCount from './ItemCount';
-import CartContext from '../context/CartContext';
+import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import ItemCount from "./ItemCount";
+import CartContext from "../context/CartContext";
+
+const ItemDetail = ({ productDetail }) => {
 
 
+  const { title, price, description, image } = productDetail;
 
-const ItemDetail = ({productDetail}) => {
-console.log(productDetail);
+  const [cart, setCart] = useState(true);
+  const { addItem } = useContext(CartContext);
 
-
-const {title,price,description,image} = productDetail;
-
-const [cart, setCart] = useState(true);
-const {addItem} = useContext(CartContext);
-
-
-function onAddEvent (n) {
-  setCart(false);
-  addItem({...productDetail, quantity: n});
-}
+  function onAddEvent(n) {
+    setCart(false);
+    addItem({ ...productDetail, quantity: n });
+  }
 
   return (
     <div>
@@ -38,7 +34,6 @@ function onAddEvent (n) {
                 onAdd={(n) => {
                   onAddEvent(n);
                   alert("El producto se agrego al carrito");
-                  console.log(n);
                 }}
               />
             ) : (
@@ -47,20 +42,17 @@ function onAddEvent (n) {
                   Ver Carrito
                 </Link>
                 <Link to="/">
-                    <button className="btn btn-primary btn-block w-40">
+                  <button className="btn btn-primary btn-block w-40">
                     Seguir comprando
-                    </button>
+                  </button>
                 </Link>
               </>
             )}
-            
           </div>
         </div>
       </div>
     </div>
   );
 };
-
-
 
 export default ItemDetail;

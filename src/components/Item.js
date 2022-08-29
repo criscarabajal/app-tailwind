@@ -1,9 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-
-const Item = ({product}) => {
-  const {id,title,price,image} = product;
+const Item = ({ product }) => {
+  const { id, title, price, image } = product;
 
   return (
     <div>
@@ -16,16 +15,13 @@ const Item = ({product}) => {
           <p>{price}</p>
           <div className="card-actions">
             <button className="btn btn-primary">
-              <Link to={"/producto/"+id.toString()}>Ver detalle</Link>
+              <Link to={"/producto/" + id.toString()}>Ver detalle</Link>
             </button>
           </div>
         </div>
       </div>
     </div>
-    
   );
 };
-
-
 
 export default Item;
